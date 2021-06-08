@@ -1,0 +1,5 @@
+<launch>
+  <arg name="bag_path" value="/home/erik/Documents/bags/FSR_Rothenthurm_1hSegment.bag" />
+  <node name="bag" pkg="rosbag" type="play" args="$(arg bag_path)" />
+  <node name="image_reader" pkg="carbin_origins_task" output="screen" type="main.py" />
+</launch>
